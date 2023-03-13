@@ -1,12 +1,9 @@
 nav{
 
     /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 12px;
-    gap: 12px;
-
+    display : flex;
+    position: fixed;
+    width: 100%;
     background: #deae70;
 
     /* Inside auto layout */
@@ -34,15 +31,28 @@ body{
     align-self: stretch;
     flex-grow: 0;
 }
+.bloc-cv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.bloc-hobbies{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .h1{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
     color: rgb(73, 65, 53);
+}
+.ul{
+
 }
