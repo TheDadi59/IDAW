@@ -1,0 +1,21 @@
+nav{
+    background-color: rgb(203, 175, 141);
+}
+
+body{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 12px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
