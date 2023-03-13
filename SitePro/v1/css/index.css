@@ -2,8 +2,6 @@ nav{
 
     /* Auto layout */
     display : flex;
-    position: fixed;
-    width: 100%;
     background: #deae70;
 
     /* Inside auto layout */
@@ -54,5 +52,5 @@ body{
     color: rgb(73, 65, 53);
 }
 .ul{
-
+    flex-direction: row;
 }
