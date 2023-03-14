@@ -6,8 +6,9 @@ require_once('template_header.php');
 ?>
 
 
-    <div class ="bloc-hobbies">
-        <h1>Mes hobbies</h1> 
+    <div class ="bloc-cv">
+        <h1>Infos techniques</h1> 
+    </div>
 
 <?php
     require_once('template_footer.php');
