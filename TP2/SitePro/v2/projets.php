@@ -3,6 +3,7 @@
 ?>
 <?php
     require_once('template_menu.php');
+    renderMenuToHTML('projets');
 ?>
 
     <div class ="bloc-cv">
