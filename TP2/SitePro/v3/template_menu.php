@@ -48,9 +48,9 @@
                 // ...
                 foreach($mymenu as $pageId => $pageParameters) {
                     if($currentPageId == $pageId)
-                        echo "<li class='nav-item'><a class='nav-link' id='currentpage' href='{$pageId}.php'>{$pageParameters[0]}</a></li>";
+                        echo "<li class='nav-item'><a class='nav-link' id='currentpage' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$pageId}'>{$pageParameters[0]}</a></li>";
                     else
-                        echo "<li class='nav-item'><a class='nav-link' href='{$pageId}.php'>{$pageParameters[0]}</a></li>";
+                        echo "<li class='nav-item'><a class='nav-link' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$pageId}'>{$pageParameters[0]}</a></li>";
                 }
                 // ...
                 echo "
