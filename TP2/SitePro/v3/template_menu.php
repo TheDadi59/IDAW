@@ -27,13 +27,15 @@
             // un tableau qui d\'efinit la structure du site
                 $mymenu = array(
                 // idPage titre
-                'index' => array( 'Accueil','Welcome' ),
+                'accueil' => array( 'Accueil','Welcome' ),
                 'cv' => array( 'CV','CV' ),
                 'hobbies' => array('Hobbies','Hobbies'),
                 'projets' => array('Mes Projets','Our Projects'),
                 'infos-techniques' => array('Informations','Informations'),
-                'contact' => array('Me contacter','Contact me')
+                'contact' => array('Me contacter','Contact me'),
+                'language' => array('fr','eng')
                 );
+
                 echo "
                     <nav class='navbar navbar-expand-lg navbar-dark fixed-top' id='mainNav'>
                     <div class='container'>

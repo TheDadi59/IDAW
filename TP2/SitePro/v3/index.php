@@ -8,6 +8,14 @@
     }
 ?>
 
+<?php
+    $currentLanguageId = 'fr';
+    if(isset($_GET['lang'])) {
+        $currentLanguageId = $_GET['lang'];
+    }
+
+?>
+
 <header class="bandeau_haut">
     <h1 class="titre">Hector Durand</h1>
 </header>
