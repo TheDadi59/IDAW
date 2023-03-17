@@ -3,7 +3,7 @@
 ?>
 <?php
     require_once('template_menu.php');
-    renderMenuToHTML('projets');
+    renderMenuToHTML('projets','fr');
 ?>
 
     <div class ="bloc-cv">

@@ -23,19 +23,19 @@
         </nav>
 -->
     <?php
-            function renderMenuToHTML($currentPageId) {
+            function renderMenuToHTML($currentPageId,$currentLanguageId) {
             // un tableau qui d\'efinit la structure du site
-                $mymenu = array(
-                // idPage titre
-                'accueil' => array( 'Accueil','Welcome' ),
-                'cv' => array( 'CV','CV' ),
-                'hobbies' => array('Hobbies','Hobbies'),
-                'projets' => array('Mes Projets','Our Projects'),
-                'infos-techniques' => array('Informations','Informations'),
-                'contact' => array('Me contacter','Contact me'),
-                'language' => array('fr','eng')
-                );
-
+                $mymenu = [
+                    // idPage titre
+                    'accueil' => ['Accueil','Welcome'],
+                    'cv' => ['CV','CV' ],
+                    'hobbies' => ['Hobbies','Hobbies'],
+                    'projets' => ['Mes Projets','Our Projects'],
+                    'infos-techniques' => ['Informations','Informations'],
+                    'contact' => ['Me contacter','Contact me'],
+                    'language' => ['fr','eng','esp'],
+                ];
+                $lang = 0;
                 echo "
                     <nav class='navbar navbar-expand-lg navbar-dark fixed-top' id='mainNav'>
                     <div class='container'>
@@ -48,12 +48,23 @@
                             <ul class='navbar-nav text-uppercase ms-auto py-4 py-lg-0'>
                 ";
                 // ...
+
+        
                 foreach($mymenu as $pageId => $pageParameters) {
+                    for ( $i = 0; $i < count($pageParameters);$i++)
+                    {
+                        if ($currentLanguageId == $pageParameters[$i])
+                            $lang = $i;
+                    }
                     if($currentPageId == $pageId)
-                        echo "<li class='nav-item'><a class='nav-link' id='currentpage' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$pageId}'>{$pageParameters[0]}</a></li>";
+                        echo "<li class='nav-item'><a class='nav-link' id='currentpage' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$pageId}&lang={$currentLanguageId}'>{$pageParameters[$lang]}</a></li>";
                     else
-                        echo "<li class='nav-item'><a class='nav-link' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$pageId}'>{$pageParameters[0]}</a></li>";
+                        echo "<li class='nav-item'><a class='nav-link' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$pageId}&lang={$currentLanguageId}'>{$pageParameters[$lang]}</a></li>";
                 }
+                
+                
+
+
                 // ...
                 echo "
                                 </ul>
