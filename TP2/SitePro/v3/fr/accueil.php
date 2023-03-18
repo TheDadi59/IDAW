@@ -3,7 +3,7 @@
 ?>
 <?php
     require_once('template_menu.php');
-    renderMenuToHTML('index','fr');
+    renderMenuToHTML('accueil','fr');
 
 ?>
         <!-- Masthead-->

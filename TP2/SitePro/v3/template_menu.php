@@ -33,8 +33,11 @@
                     'projets' => ['Mes Projets','Our Projects'],
                     'infos-techniques' => ['Informations','Informations'],
                     'contact' => ['Me contacter','Contact me'],
-                    'language' => ['fr','eng','esp'],
                 ];
+
+                $language =['fr','eng',];
+
+
                 $lang = 0;
                 echo "
                     <nav class='navbar navbar-expand-lg navbar-dark fixed-top' id='mainNav'>
@@ -48,18 +51,32 @@
                             <ul class='navbar-nav text-uppercase ms-auto py-4 py-lg-0'>
                 ";
                 // ...
+                for ( $i = 0; $i < count($language);$i++)
+                {
+                    if ($currentLanguageId == $language[$i])
+                        $lang = $i;
+                }
 
         
                 foreach($mymenu as $pageId => $pageParameters) {
-                    for ( $i = 0; $i < count($pageParameters);$i++)
-                    {
-                        if ($currentLanguageId == $pageParameters[$i])
-                            $lang = $i;
-                    }
+
                     if($currentPageId == $pageId)
                         echo "<li class='nav-item'><a class='nav-link' id='currentpage' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$pageId}&lang={$currentLanguageId}'>{$pageParameters[$lang]}</a></li>";
                     else
                         echo "<li class='nav-item'><a class='nav-link' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$pageId}&lang={$currentLanguageId}'>{$pageParameters[$lang]}</a></li>";
+                }
+
+                
+                switch ($currentLanguageId)
+                {
+                    case 'fr':
+                        echo "<li class='nav-item'><a class='nav-link' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$currentPageId}&lang={$language[1]}'>{$language[1]}</a></li>";
+                    break;
+                    case 'eng':
+                        echo "<li class='nav-item'><a class='nav-link' href='http://localhost/IDAW/TP2/SitePro/v3/index.php?page={$currentPageId}&lang={$language[0]}'>{$language[0]}</a></li>";
+                    break;
+                
+                
                 }
                 
                 
@@ -70,7 +87,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </nav>
+                    </nav> 
                 ";
             }
     ?>
