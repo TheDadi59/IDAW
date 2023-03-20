@@ -5,3 +5,9 @@
     </select>
     <input type="submit" value="Appliquer" />
 </form>
+<!--
+    </?php 
+        session_unset();
+        session_destroy();
+?>
+-->
