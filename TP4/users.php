@@ -18,20 +18,20 @@
         myLog('Erreur : '.$erreur->getMessage());
     }
 
-    $request = $pdo->prepare("select * from users");
+    $request = $pdo->prepare("select * from users"); // c'est la ligne de commande
 
 //-----
-    $request->execute();
+    $request->execute(); // c'est le go
     echo("<table>
     <tr>
-      <th>ID</th>
-      <th>Login</th>
-      <th>Mail</th>
+      <th>id</th>
+      <th>nom</th>
+      <th>email</th>
     </tr>");
     foreach($request as $user){
         echo("<tr>
-        <td>{$user["ID"]}</td>
-        <td>{$user["login"]}</td>
+        <td>{$user["id"]}</td>
+        <td>{$user["nom"]}</td>
         <td>{$user["email"]}</td>
       </tr>");
     }
