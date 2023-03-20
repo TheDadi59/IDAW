@@ -1,10 +1,10 @@
-<?php
-
-    if(isset($_GET['css'])) {
+<?php if(isset($_GET['css'])) {
         $currentStyle = $_GET['css'];
         setcookie("style", $currentStyle, time()+3600);
-    }
+        }
 ?>
+
+
 <form id="login_form" action="connected.php" method="POST">
     <table>
         <tr>

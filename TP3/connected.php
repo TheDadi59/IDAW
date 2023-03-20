@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
     require_once('template_header.php');
 // on simule une base de données
     $users = array(
@@ -27,8 +27,11 @@
     if(!$successfullyLogged) {
         echo $errorText;
         } else {
+            $_SESSION['utilisateur'] = $login;
             echo "<h1>Bienvenu ".$login."</h1>";
         }
+    
+    echo "<a href = http://localhost/IDAW/TP3/>Deconnexion<a>";
 
     require_once('template_footer.php');
 ?>
