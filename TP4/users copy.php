@@ -17,6 +17,23 @@
         <td>{$user["email"]}</td>
       </tr>");  
     }
+    echo("
+    <form id='add' action='add_table.php' method='POST'>
+        <table>
+            <tr>
+                <th>Nom :</th>
+                <td><input type='text' name='nom'></td>
+            </tr>
+            <tr>
+                <th>Email :</th>
+                <td><input type='text' name='email'></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><input type='submit' value='Add' /></td>
+            </tr>
+        </table>
+    </form>");
 //-----
 
 
