@@ -1,6 +1,6 @@
 <?php
     require_once('connection_open.php');
-    require_once('db_init.php');
+    // require_once('db_init.php');
 //-----
     $request = $pdo->prepare("select * from users"); // c'est la ligne de commande
     $request->execute(); // c'est le go

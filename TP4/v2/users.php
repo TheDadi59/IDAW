@@ -1,6 +1,6 @@
 <?php
     require_once('connection_open.php');
-    require_once('db_init.php');
+    //require_once('db_init.php');
 //-----
     $request = $pdo->prepare("select * from users"); // c'est la ligne de commande
     $request->execute(); // c'est le go
@@ -17,12 +17,12 @@
         <td>{$user["email"]}</td>
       </tr>");  
     }
-    echo("
-    <form id='add' action='add_table.php' method='POST'>
+    echo "
+    <form id='add' action='add_data.php' method='POST'>
         <table>
             <tr>
                 <th>Nom :</th>
-                <td><input type='text' name='nom'></td>
+                <td><input type='text' name='name'></td>
             </tr>
             <tr>
                 <th>Email :</th>
@@ -33,7 +33,7 @@
                 <td><input type='submit' value='Add' /></td>
             </tr>
         </table>
-    </form>");
+    </form>";
 //-----
 
 

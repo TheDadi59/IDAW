@@ -15,6 +15,6 @@
     }
 
     catch (PDOException $erreur) {
-        myLog('Erreur : '.$erreur->getMessage());
+        
     }
 ?>
