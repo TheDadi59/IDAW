@@ -79,19 +79,27 @@
                 function onFormSubmit() {
                 // prevent the form to be sent to the server
                     event.preventDefault();
-                    // let id = 0;
-                    let id = $("#inputNom").val();
+                    
+                    let tableRows = document.getElementsByTagName('tr');
+                    let id = "student-"+tableRows.length;
                     let nom = $("#inputNom").val();
                     let prenom = $("#inputPrenom").val();
                     let date = $("#inputDateNaissance").val();
                     let like = $("#inputLike").val();
                     let remarque = $("#inputRemarque").val();
-                    
-
-                    $("#studentsTableBody").append(`<tr id="student-${id}"><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${like}</td><td>${remarque}</td> <td> <button type="button" onclick="DeleteData()">Delete</button> <button type="button" onclick="EditData(${id})">Edit</button></td></tr>`);
-                    resetCache();
+                    addStudent(id,nom,prenom,date,like,remarque);
                     
                 }
+                function addStudent(id,nom,prenom,date,like,remarque){
+
+                    $("#studentsTableBody").append(`<tr id="${id}"><td>${nom}</td><td>${prenom}</td><td>${date}</td><td>${like}</td><td>${remarque}</td> <td> <button type="button" onclick="DeleteData()">Delete</button> <button type="button" onclick="EditData(${id})">Edit</button></td></tr>`);
+                    resetCache();
+                }
+                //this dans le delete() dans append puis e.closest("tr.remove");
+
+
+
+
                 function resetCache(){
                     $(':input').val('');
                     // $(':text').on('input').val('');
@@ -100,11 +108,12 @@
                 }
 
                 function DeleteData() {
-                    (event.target).closest("tr").remove();
+                    $(event.target).closest("tr").remove();
                 }
 
                 function EditData() {
-                    let id = (event.target).closest("tr");
+                    let currentid = (event.target).closest("tr");
+                    DeleteData();
                     onFormSubmit();
                 }
             
