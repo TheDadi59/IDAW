@@ -83,7 +83,7 @@
     }
 
     function updateUsers($id,$name,$email){
-        require_once('dbconnect.php');
+        require_once('db_init.php');
             $sql = "UPDATE users SET name = '$name', email = '$email' WHERE id =$id";
             $pdo->prepare($sql)->execute();
     }
