@@ -30,7 +30,7 @@
                     'accueil' => ['Accueil','Welcome'],
                     'cv' => ['CV','CV' ],
                     'hobbies' => ['Hobbies','Hobbies'],
-                    'projets' => ['Mes Projets','Our Projects'],
+                    'projets' => ['Mes Projets','My Projects'],
                     'infos-techniques' => ['Informations','Informations'],
                     'contact' => ['Me contacter','Contact me'],
                 ];

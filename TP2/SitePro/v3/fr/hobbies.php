@@ -38,6 +38,9 @@ require_once('template_header.php');
                                     <li>League of Legend</li> 
                                     <li>Dofus</li>
                                     <li>Osu!</li>
+                                    <li>Super Smash bros Ultimate</li>
+                                    <li>Genshin impact</li>
+                                    <li>Et plus...</li>
                                 </ul>
                                 </p>
                             </div>

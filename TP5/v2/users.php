@@ -76,7 +76,7 @@
     
         $.ajax({ 
         
-            url: "http://localhost/IDAW/TP4/v3_api/users2.php", // a adapter pour tous
+            url: "http://localhost/IDAW/TP4/v3_api/users.php", // a adapter pour tous
 
             method: "GET",
 
@@ -103,7 +103,7 @@
 function createtable(){
     $.post({ 
             
-            url: "http://localhost/IDAW/TP4/v3_api/users2.php", // a adapter pour tous
+            url: "http://localhost/IDAW/TP4/v3_api/users.php", // a adapter pour tous
 
             method: "POST",
 
@@ -127,7 +127,7 @@ function createtable(){
 function UpdateTable(){
     $.ajax({ 
             
-            url: "http://localhost/IDAW/TP4/v3_api/users2.php", // a adapter pour tous
+            url: "http://localhost/IDAW/TP4/v3_api/users.php", // a adapter pour tous
 
             method: "PUT",
 
@@ -152,7 +152,7 @@ var id = (event.target).closest("tr");
 
 $.ajax({ 
         
-        url: `http://localhost/IDAW/TP4/v3_api/users2.php?id=${id}`, // a adapter pour tous
+        url: `http://localhost/IDAW/TP4/v3_api/users.php?id=${id}`, // a adapter pour tous
 
         method: "DELETE",
 

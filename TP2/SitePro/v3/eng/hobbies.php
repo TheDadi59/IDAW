@@ -6,14 +6,12 @@ require_once('template_header.php');
     renderMenuToHTML('hobbies','eng');
 ?>
 
-
-
         <!-- hobbies -->
 
         <section class="page-section" id="hobbies">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Mes Hobbies</h2>
+                    <h2 class="section-heading text-uppercase">My Hobbies</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <ul class="timeline">
@@ -21,7 +19,7 @@ require_once('template_header.php');
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/animationjaponaise.jpeg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="subheading">Animation japonaises</h4>
+                                <h4 class="subheading">Japonese animation</h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted"><a href="https://myanimelist.net/profile/TheDadi">Voici la liste de tout mes animes</a></p></div>
                         </div>
@@ -30,7 +28,7 @@ require_once('template_header.php');
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/jeux-video.jpeg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="subheading">Jeux videos</h4>
+                                <h4 class="subheading">Video games</h4>
                             </div>
                             <div class="timeline-body">
                                 <p class="text-muted"> 
@@ -38,6 +36,9 @@ require_once('template_header.php');
                                     <li>League of Legend</li> 
                                     <li>Dofus</li>
                                     <li>Osu!</li>
+                                    <li>Super Smash bros Ultimate</li>
+                                    <li>Genshin impact</li>
+                                    <li>And more...</li>
                                 </ul>
                                 </p>
                             </div>
